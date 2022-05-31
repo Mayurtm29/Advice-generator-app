@@ -1,0 +1,123 @@
+@import "var";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: $bgColor;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    @include flex(row);
+}
+
+.container {
+    width: 90%;
+    @include flex(column);
+    background-color: $elementColor;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.text {
+    @include flex(column);
+    text-align: center;
+    padding: 2rem;
+
+    p {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        color: $neon;
+        margin-bottom: 2rem
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: $fontColor
+    }
+}
+
+.divider {
+    @include flex(column);
+    padding: 1rem 1rem 5rem;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.dice {
+    width: 6rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: $neon;
+    @include flex(column);
+    position: absolute;
+    bottom: -3rem;
+
+    &:hover {
+        box-shadow: 0 0 2.5rem $neon;
+    }
+
+    &:active {
+        width: 5.5rem;
+    }
+
+}
+
+.loader {
+    position: relative;
+    min-width: 5rem;
+    min-height: 5rem;
+    width: 100%;
+    // padding-bottom: 100%;
+}
+
+.loader::after {
+    display: block;
+    content: ' ';
+    width: calc(50% - 2rem);
+    height: calc(50% - 2rem);
+    border-style: solid;
+    border-width: 2rem;
+    border-color: transparent $fontColor transparent $neon;
+    border-radius: 50%;
+    animation: rotateRight 1s linear infinite;
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+
+@media screen and (min-width:600px) and (max-width:800px) {
+    .container {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .container {
+        width: 40%;
+    }
+}

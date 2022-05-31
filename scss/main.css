@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: #1f2632;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #323a49;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+
+.text p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #52ffa8;
+  margin-bottom: 2rem;
+}
+
+.text h1 {
+  font-size: 2rem;
+  color: #cee3e9;
+}
+
+.divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 1rem 5rem;
+}
+
+.divider img {
+  width: 100%;
+}
+
+.dice {
+  width: 6rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #52ffa8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: -3rem;
+}
+
+.dice:hover {
+  -webkit-box-shadow: 0 0 2.5rem #52ffa8;
+          box-shadow: 0 0 2.5rem #52ffa8;
+}
+
+.dice:active {
+  width: 5.5rem;
+}
+
+.loader {
+  position: relative;
+  min-width: 5rem;
+  min-height: 5rem;
+  width: 100%;
+}
+
+.loader::after {
+  display: block;
+  content: ' ';
+  width: calc(50% - 2rem);
+  height: calc(50% - 2rem);
+  border-style: solid;
+  border-width: 2rem;
+  border-color: transparent #cee3e9 transparent #52ffa8;
+  border-radius: 50%;
+  -webkit-animation: rotateRight 1s linear infinite;
+          animation: rotateRight 1s linear infinite;
+}
+
+@-webkit-keyframes rotateRight {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateRight {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .container {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
