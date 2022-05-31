@@ -126,6 +126,7 @@ main {
           flex-direction: column;
   position: absolute;
   bottom: -3rem;
+  cursor: pointer;
 }
 
 .dice:hover {

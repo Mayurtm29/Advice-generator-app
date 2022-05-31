@@ -68,6 +68,7 @@ main {
     @include flex(column);
     position: absolute;
     bottom: -3rem;
+    cursor: pointer;
 
     &:hover {
         box-shadow: 0 0 2.5rem $neon;
